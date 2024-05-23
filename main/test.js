@@ -22,6 +22,12 @@ class ModelUserReview {
     this.idReview = idReview;
   }
 }
+// class ModelMessage {
+//   constructor(text) {
+//     this.id = Math.random();
+//     this.text = text;
+//   }
+// }
 
 class ControllerUsers {
   #users = [];
@@ -75,12 +81,20 @@ class ControllerUserReviews {
     });
   }
 }
+class ControllerMessages {
+  messages = [];
+
+  create(text) {}
+  read(id) {}
+  update(id, text) {}
+  delete(id) {}
+}
 
 class App {
   #users = new ControllerUsers();
   #reviews = new ControllerReviews();
   #userReviews = new ControllerUserReviews();
-  // #messages = new ControllerMessages();
+  #messages = new ControllerMessages();
   #auth = null;
 
   getUsers() {
